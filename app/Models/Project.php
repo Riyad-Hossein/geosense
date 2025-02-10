@@ -28,8 +28,7 @@ class Project extends Model
 
 
     protected $fillable = [
-        'business_type_id',
-        'project_category_id',
+        'service_category_id',
         'name',
         'slug',
         'client',
@@ -56,11 +55,7 @@ class Project extends Model
         return asset('assets/backend/images/placeholder.jpg');
     }
 
-    public function business_type(){
-        return $this->belongsTo(BusinessType::class);
-    }
-
     public function project_category(){
-        return $this->belongsTo(ServiceCategory::class);
+        return $this->belongsTo(ServiceCategory::class, 'service_category_id', 'id');
     }
 }

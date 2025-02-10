@@ -6,10 +6,10 @@
                     <div class="form-check p-0 d-flex align-items-center"><span class="ms-4">SL</span></div>
                 </th>
                 <th scope="col text-center">Date</th>
+                <th scope="col text-center">Category</th>
                 <th scope="col text-center">Project Name</th>
                 <th scope="col text-center">Client</th>
-                <th scope="col text-center">Business Type</th>
-                <th scope="col text-center">Category</th>
+                <th scope="col text-center">Image</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -18,10 +18,10 @@
                 <tr>
                     <td><strong class="ms-4">{{$key+1}}</strong></td>
                     <td>{{$project->project_date??'N/A'}}</td>
+                    <td>{{$project->project_category?->name??'N/A'}}</td>
                     <td>{{$project->name??'N/A'}}</td>
                     <td>{{$project->client??'N/A'}}</td>
-                    <td>{{$project->business_type?->name??'N/A'}}</td>
-                    <td>{{$project->project_category?->name??'N/A'}}</td>
+                    <td><img src="{{$project->show_image}}" alt="" width="80px"></td>
                     <td>
                         <div class="dropdown action-opt">
                             <button class="btn bg p-0 dropdown_action_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-ellipsis-vertical"></i></button>

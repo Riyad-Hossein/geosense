@@ -1,7 +1,7 @@
 <form action="{{ route('admin.team.update', $item->id) }}" id="partnerUpdateForm" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="modal-header">
-        <h1 class="modal-title fs-5" id="faq-addlabel">Edit Project</h1>
+        <h1 class="modal-title fs-5" id="faq-addlabel">Edit Team Member</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body custom-modal-body">

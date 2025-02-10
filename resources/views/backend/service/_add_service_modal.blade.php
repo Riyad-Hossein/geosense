@@ -12,24 +12,13 @@
                     <div class="row">
                         <div class="col-lg-6 mb-3">
                             <div class="form-group">
-                                <label class="label">Business Type <span class="text-danger">*</span></label>
-                                <div class="form-group position-relative">
-                                    <select name="business_type" onchange="getServiceCategory(this)" class="form-select select2 form-control h-58 ps-5" aria-label="Default select example" required>
-                                        <option selected value="" class="text-dark">Select Type</option>
-                                        @foreach ($business_types as $type)
-                                            <option value="{{$type->id}}" class="text-dark">{{$type->name}}</option>
-                                        @endforeach
-                                    </select>
-                                    <i class="fa-light fa-location-dot position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-3">
-                            <div class="form-group">
                                 <label class="label">Service Category <span class="text-danger">*</span></label>
                                 <div class="form-group position-relative">
                                     <select name="service_category" id="category_id" class="form-select select2 form-control h-58 ps-5" aria-label="Default select example" required>
                                         <option selected value="" class="text-dark">Select Category</option>
+                                        @foreach ($service_categories as $category)
+                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                        @endforeach
                                     </select>
                                     <i class="fa-light fa-location-dot position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
                                 </div>
@@ -44,8 +33,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-lg-6 mb-3"></div>
 
                         <div class="col-lg-6 mb-3">
                             <div class="form-group">

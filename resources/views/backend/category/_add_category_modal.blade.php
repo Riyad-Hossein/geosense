@@ -11,20 +11,6 @@
                 <div class="modal-body custom-modal-body">
                     <div class="row gap-3">
                         <div class="col-lg-12">
-                            <div class="form-group">
-                                <label class="label">Business Type <span class="text-danger">*</span></label>
-                                <div class="form-group position-relative">
-                                    <select name="business_type" class="form-select select2 form-control h-58 ps-5" aria-label="Default select example" required>
-                                        <option selected value="" class="text-dark">Select Type</option>
-                                        @foreach ($business_types as $type)
-                                            <option value="{{$type->id}}" class="text-dark">{{$type->name}}</option>
-                                        @endforeach
-                                    </select>
-                                    <i class="fa-light fa-location-dot position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
                             <div class="form-group ">
                                 <label class="label">Category Name <span class="text-danger">*</span></label>
                                 <div class="form-group position-relative">

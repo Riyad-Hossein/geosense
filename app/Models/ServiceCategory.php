@@ -28,9 +28,9 @@ class ServiceCategory extends Model
 
 
     protected $fillable = [
-        'business_type_id',
         'name',
         'slug',
+        'description',
         'image',
         'status',
         'created_by',
@@ -41,12 +41,4 @@ class ServiceCategory extends Model
         'deleted_at',
         'deleted_by'
     ];
-
-    public function business_type(){
-        return $this->belongsTo(BusinessType::class)
-            ->where('deleted', BusinessType::DELETED_NO)
-            ->where('status', BusinessType::STATUS_ACTIVE);
-    }
-
-    
 }

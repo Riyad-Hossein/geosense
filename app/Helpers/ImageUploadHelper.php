@@ -123,6 +123,7 @@ class ImageUploadHelper
     {
         $availableTypes = [
             "jpg",
+            "JPG",
             "jpeg",
             "png",
             "gif",

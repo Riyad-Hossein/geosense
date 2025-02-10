@@ -1,151 +1,57 @@
-<!-- footer -->
-<section class="hr-marinetec-footer-29-main">
-  <div class="footer-29 py-5">
-    <div class="container py-lg-3">
-      <div class="row footer-top-29">
-        <div class="col-lg-3 col-sm-6 footer-list-29 footer-2 mt-lg-0 mt-md-5 mt-4">
-          <div class="footer-logo mb-3">
-            <h2>
-              <a class="navbar-brand" href="index.html"> KBI <span class="sub-logo">TEC</span>
-                </span>
-                <span class="sub-title">Marine Service & Industrial Equipment Supply.</span>
-              </a>
-            </h2>
-          </div>
-          <ul class="mt-3">
-            <li>
-              <a href="tel:+82 10 8717 3709">
-                <span class="fa fa-phone"></span> +82 10 8717 3709 </a>
-            </li>
-            <li>
-              <a class="company-info-text" href="mailto:sales@kbshipdesign.com">
-                <span class="fa fa-envelope-o"></span>sales@kbitec.com </a>
-            </li>
-            <li>
-              <span class="fa fa-map-marker"></span> 10 Gwahaksandan-ro 306, Gangseo-gu, Busan, South Korea.
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-sm-6 footer-list-29 footer-2 mt-lg-0 mt-md-5 mt-4">
-          <ul>
-            <h6 class="footer-title-29">Company</h6>
-            <li>
-              <a href="{{route('frontend.about')}}">About Us</a>
-            </li>
-            <li>
-              <a href="{{route('frontend.project')}}"> Projects</a>
-            </li>
-            <li>
-              <a href="#">Services</a>
-            </li>
-            <li>
-              <a href="#"> Careers</a>
-            </li>
-            <li>
-              <a href="{{route('frontend.team')}}">Team</a>
-            </li>
-            <li>
-              <a href="{{route('frontend.contact')}}">Contact us</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-sm-6 footer-list-29 footer-2 mt-lg-0 mt-md-5 mt-4">
-          <h6 class="footer-title-29">What We Do</h6>
-          <ul>
-            <li>
-              <a href="#ocen">Ship Design</a>
-            </li>
-            <li>
-              <a href="#">Construction</a>
-            </li>
-            <li>
-              <a href="#">Consultancy</a>
-            </li>
-            <li>
-              <a href="#">Production Design</a>
-            </li>
-            <li>
-              <a href="#">Structural Analysis</a>
-            </li>
-            <li>
-              <a href="#">Survey</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-sm-6 footer-list-29 footer-2 mt-lg-0 mt-md-5 mt-4">
-          <h6 class="footer-title-29">Quick Links</h6>
-          <ul>
-            <li>
-              <a href="#">Terms of service</a>
-            </li>
-            <li>
-              <a href="#"> Privacy policy</a>
-            </li>
-            <li>
-              <a href="#"> Documentation</a>
-            </li>
-            <li>
-              <a href="#"> Support</a>
-            </li>
-            <li>
-              <a href="#"> Components</a>
-            </li>
-            <li>
-              <a href="#"> Changelog</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- START NEWSLETTER -->
+<section class="newsletter_form section-padding">
+			<div class="container">
+				<div class="row">										
+					<div class="col-md-8 col-md-offset-2 col-sm-12 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+						<div class="newsletter_title text-center">
+							<h4>Subscribe to get the latest news, update and offer information. Don't worry, we won't send spam!</h4>
+							<!-- START MAILCHIMP SIGNUP FORM -->
+							<div class="signup">
+							<form action="http://site90.us11.list-manage.com/subscribe/post?u=599a2153f4b86cb2f92d4af3a&amp;id=26d7c26287" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+							<div class="input-group input-group-lg newsletter">
+								<input type="email" name="EMAIL" class="form-control" placeholder="Enter Email">
+								<span class="input-group-btn">
+									<button type="submit" name="subscribe" class="btn-newsletter-bg">Subscribe!</button>
+								</span>
+							</div>
+							<div id="mce-responses">
+								<div class="response" id="mce-error-response" style="display:none"></div>
+								<div class="response" id="mce-success-response" style="display:none"></div>
+							</div>
+							</form>
+							</div>
+							<!-- END MAILCHIMP SIGNUP FORM -->
+						</div>
+					</div><!--- END COL -->
+				</div><!--- END ROW -->
+			</div><!--- END CONTAINER -->
+		</section>
+		<!-- END FOOTER TOP -->
+		
+		<!-- START FOOTER BOTTOM -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+						<p class="footer_copyright pull-left">GEOSENSE GLOBAL &copy; 2025 All Rights Reserved.</p>						
+					</div><!--- END COL -->
 
-<section class="hr-marinetec-copyright">
-  <div class="container">
-    <div class="row bottom-copies">
-      <p class="col-lg-8 copy-footer-29">© 2024 KBITEC | All Rights Reserved. <span class="footer-developer-by-text">Developed By <a href="https://riyadhossein.com" target="_blank" class="text-decoration-none">Md. Riyad Hossein</a>
-        </span>
-      </p>
-      <div class="col-lg-4 main-social-footer-29">
-        <a href="#" class="facebook">
-          <i class="social-icon fa-brands fa-facebook"></i>
-        </a>
-        <a href="#" class="twitter">
-          <i class="social-icon fa-brands fa-x-twitter"></i>
-        </a>
-        <a href="#">
-          <i class="social-icon fa-brands fa-youtube"></i>
-        </a>
-        <a href="#" class="instagram">
-          <i class="social-icon fa-brands fa-instagram"></i>
-        </a>
-        <a href="#" class="linkedin">
-          <i class="social-icon fa-brands fa-linkedin"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-  <!-- move top -->
-  <button onclick="topFunction()" id="movetop" title="Go to top"> &#10548; </button>
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-  <script>
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {
-      scrollFunction()
-    };
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+						<p class="footer_copyright pull-center">Developed By: <a href="https://riyadhossein.com" target="_blank">Md. Riyad Hossein.</a></p>						
+					</div>
 
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("movetop").style.display = "block";
-      } else {
-        document.getElementById("movetop").style.display = "none";
-      }
-    }
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
-  <!-- /move top -->
-</section>
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 wow zoomIn">
+						<div class="footer_social pull-right">
+							<ul>
+								<li><a class="footer_facebook  wow bounceInDown" data-wow-delay=".1s" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="footer_google wow bounceInDown" data-wow-delay=".3s" href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+								<li><a class="footer_linkedin wow bounceInDown" data-wow-delay=".4s" href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+								<li><a class="footer_youtube wow bounceInDown" data-wow-delay=".5s" href="#" data-toggle="tooltip" data-placement="top" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+								<li><a class="footer_skype wow bounceInDown" data-wow-delay=".6s" href="#" data-toggle="tooltip" data-placement="top" title="Skype"><i class="fa fa-skype"></i></a></li>
+							</ul>
+						</div>					
+					</div><!--- END COL -->
+				</div><!--- END ROW -->
+			</div><!--- END CONTAINER -->
+		</footer>
+		<!-- END FOOTER BOTTOM-->	

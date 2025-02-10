@@ -6,22 +6,6 @@
     </div>
     <div class="modal-body custom-modal-body">
         <div class="row">
-            <!-- Business Type -->
-            <div class="col-lg-6 mb-3">
-                <div class="form-group">
-                    <label class="label">Business Type <span class="text-danger">*</span></label>
-                    <div class="form-group position-relative">
-                        <select name="business_type" onchange="getServiceCategory(this)" class="form-select select2 form-control h-58 ps-5" required>
-                            <option selected value="" class="text-dark">Select Type</option>
-                            @foreach ($business_types as $type)
-                                <option value="{{ $type->id }}" {{ ($item->business_type_id == $type->id) ? 'selected' : '' }} class="text-dark">{{ $type->name }}</option>
-                            @endforeach
-                        </select>
-                        <i class="fa-light fa-location-dot position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
-                    </div>
-                </div>
-            </div>
-
             <!-- Service Category -->
             <div class="col-lg-6 mb-3">
                 <div class="form-group">
@@ -48,8 +32,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 mb-3"></div>
-
             <!-- Thumbnail Image -->
             <div class="col-lg-6 mb-3">
                 <div class="form-group">

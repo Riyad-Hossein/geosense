@@ -18747,7 +18747,7 @@ a#x__NEXT__X {
     background-color: transparent;
     color: #5b5b98;
     border-color: #f7faff;
-    padding: 15px 25px
+    /* padding: 15px 25px */
 }
 
 .default-table-area .table-responsive .table tbody tr td a {

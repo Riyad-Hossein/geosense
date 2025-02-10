@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('business_type_id');
             $table->unsignedBigInteger('service_category_id');
             $table->string('name');
             $table->string('slug');

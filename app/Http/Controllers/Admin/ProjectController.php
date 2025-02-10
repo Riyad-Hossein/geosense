@@ -28,7 +28,9 @@ class ProjectController extends BackendController
     {
         $this->setPageTitle("Project");
         $this->setActiveMenu('project');
-        $data['business_types'] = BusinessType::get();
+        $data['service_categories'] = ServiceCategory::where('deleted', ServiceCategory::DELETED_NO)
+            ->where('status', ServiceCategory::STATUS_ACTIVE)
+            ->get();
 
         return  $this->view('backend.project.index')->with($data);
     }
@@ -56,13 +58,13 @@ class ProjectController extends BackendController
     {
         try {
             $request->validate([
+                'project_category' => 'required',
                 'name' => 'required|string',
                 'client' => 'required|string',
             ]);
 
             $check_duplicate = Project::where('name', $request->name)
-                ->where('business_type_id', $request->business_type)
-                ->where('project_category_id', $request->project_category)
+                ->where('service_category_id', $request->project_category)
                 ->where('deleted', Project::DELETED_NO)
                 ->where('status', Project::STATUS_ACTIVE)
                 ->first();
@@ -90,8 +92,7 @@ class ProjectController extends BackendController
             }
 
             $project = new Project();
-            $project->business_type_id = $request->business_type;
-            $project->project_category_id = $request->project_category;
+            $project->service_category_id = $request->project_category;
             $project->name = $request->name;
             $project->slug = Str::slug($request->name);
             $project->client = $request->client;
@@ -115,8 +116,6 @@ class ProjectController extends BackendController
     public function edit($id)
     {
         try {
-            $data['business_types'] = BusinessType::get();
-
             $data['item'] = Project::where('id', $id)
                 ->where('deleted', Project::DELETED_NO)
                 ->where('status', Project::STATUS_ACTIVE)
@@ -126,8 +125,7 @@ class ProjectController extends BackendController
                 throw new \Exception('Project not found');
             }
 
-            $data['service_categories'] = ServiceCategory::where('business_type_id', $data['item']->business_type_id)
-                ->where('deleted', ServiceCategory::DELETED_NO)
+            $data['service_categories'] = ServiceCategory::where('deleted', ServiceCategory::DELETED_NO)
                 ->where('status', ServiceCategory::STATUS_ACTIVE)
                 ->get();
 
@@ -145,6 +143,7 @@ class ProjectController extends BackendController
     {
         try {
             $request->validate([
+                'project_category' => 'required',
                 'name' => 'required|string',
                 'client' => 'required|string',
             ]);
@@ -158,7 +157,7 @@ class ProjectController extends BackendController
             }
 
             $check_duplicate = Project::where('name', $request->name)
-                ->where('business_type_id', $request->business_type)
+                ->where('service_category_id', $request->project_category)
                 ->where('deleted', Project::DELETED_NO)
                 ->where('status', Project::STATUS_ACTIVE)
                 ->where('id', '!=', $id)
@@ -186,8 +185,7 @@ class ProjectController extends BackendController
                 $imagePath = $result['path'];
             }
 
-            $project->business_type_id = $request->business_type;
-            $project->project_category_id = $request->project_category;
+            $project->service_category_id = $request->project_category;
             $project->name = $request->name;
             $project->slug = Str::slug($request->name);
             $project->client = $request->client;

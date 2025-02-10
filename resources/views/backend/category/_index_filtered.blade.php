@@ -6,7 +6,6 @@
                     <div class="form-check p-0 d-flex align-items-center"><span class="ms-4">SL</span></div>
                 </th>
                 <th scope="col text-center">Category Name</th>
-                <th scope="col text-center">Business Type</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -15,7 +14,6 @@
                 <tr>
                     <td><strong class="ms-4">{{$key+1}}</strong></td>
                     <td>{{$category->name??'N/A'}}</td>
-                    <td>{{$category->business_type?->name??'N/A'}}</td>
                     <td>
                         <div class="dropdown action-opt">
                             <button class="btn bg p-0 dropdown_action_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-ellipsis-vertical"></i></button>

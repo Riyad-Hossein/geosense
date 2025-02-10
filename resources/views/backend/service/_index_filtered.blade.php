@@ -5,9 +5,9 @@
                 <th scope="col" class="text-primary">
                     <div class="form-check p-0 d-flex align-items-center"><span class="ms-4">SL</span></div>
                 </th>
-                <th scope="col text-center">Service Name</th>
-                <th scope="col text-center">Business Type</th>
                 <th scope="col text-center">Category</th>
+                <th scope="col text-center">Service Name</th>
+                <th scope="col text-center">Thumbnail</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -15,9 +15,9 @@
             @forelse($services as $key=>$service)
                 <tr>
                     <td><strong class="ms-4">{{$key+1}}</strong></td>
-                    <td>{{$service->name??'N/A'}}</td>
-                    <td>{{$service->business_type?->name??'N/A'}}</td>
                     <td>{{$service->service_category?->name??'N/A'}}</td>
+                    <td>{{$service->name??'N/A'}}</td>
+                    <td><img src="{{$service->show_image}}" alt="" width="80px"></td>
                     <td>
                         <div class="dropdown action-opt">
                             <button class="btn bg p-0 dropdown_action_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-ellipsis-vertical"></i></button>

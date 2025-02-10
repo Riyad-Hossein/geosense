@@ -26,7 +26,7 @@
                         <div class="d-xxl-flex align-items-center bg-transparent border-0 text-start p-0 cursor"
                             data-bs-toggle="dropdown">
                             <div class="flex-shrink-0">
-                                <img class="rounded-circle wh-48" src="{{ asset('assets/backend') }}/images/helal.jpg"
+                                <img class="rounded-circle wh-48" src="{{ asset('assets/backend') }}/images/kausar.jpg"
                                     alt="admin">
                             </div>
                             <div class="flex-grow-1 ms-3">

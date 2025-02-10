@@ -28,7 +28,6 @@ class Service extends Model
 
 
     protected $fillable = [
-        'business_type_id',
         'service_category_id',
         'name',
         'slug',
@@ -51,10 +50,6 @@ class Service extends Model
             return asset($this->image);
         }
         return asset('assets/backend/images/placeholder.jpg');
-    }
-    
-    public function business_type(){
-        return $this->belongsTo(BusinessType::class);
     }
 
     public function service_category(){

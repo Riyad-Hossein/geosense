@@ -1,9 +1,7 @@
 <div class="sidebar-area" id="sidebar-area">
     <div class="logo position-relative">
         <a href="{{ route('dashboard') }}" class="d-block text-decoration-none">
-            <img src="{{ asset('assets/backend') }}/images/logo3.png" alt="logo-icon" style="height: 50px;">
-            <span class="logo-text fw-bold text-dark" style="padding-left: 10px;">KBITEC</span>
-            <!-- <span class="logo-text fw-bold text-dark"><img class="logo-text-img" src="{{ asset('assets/backend') }}/images/logo-text.png" alt="Hivance"></span> -->
+            <img src="{{ asset('assets/backend') }}/images/logo.png" alt="logo-icon" style="height: 50px;">
         </a>
         <button
             class="sidebar-burger-menu bg-transparent p-0 border-0 opacity-0 z-n1 position-absolute top-50 end-0 translate-middle-y"
@@ -22,6 +20,16 @@
 
             
             @if(Auth::user()->user_type == \App\Models\User::TYPE_ADMIN)
+                <li class="menu-title small text-uppercase">
+                    <span class="menu-title-text">Homepage</span>
+                </li>
+                <li class="menu-item open">
+                    <a href="{{ route('admin.slider.index') }}" class="menu-link {{ ($activeMenu == 'slider')?'active':'' }}">
+                        <i data-feather="file-plus" class="menu-icon tf-icons"></i>
+                        <span class="title">Slider</span>
+                    </a>
+                </li>
+
                 <li class="menu-title small text-uppercase">
                     <span class="menu-title-text">Services</span>
                 </li>
@@ -58,13 +66,6 @@
                         <span class="title">Team Member</span>
                     </a>
                 </li>
-
-                <!-- <li class="menu-item open">
-                    <a href="{{ route('admin.vendor.index') }}" class="menu-link {{ ($activeMenu == 'vendors')?'active':'' }}" >
-                        <i data-feather="framer" class="menu-icon tf-icons"></i>
-                        <span class="title">Vendor On-Boarding</span>
-                    </a>
-                </li> -->
             @endif
 
         </ul>
@@ -73,7 +74,7 @@
         <div class="d-flex align-items-center admin-info border-top">
             <div class="flex-shrink-0">
                 <a href="" class="d-block">
-                    <img src="{{ asset('assets/backend') }}/images/helal.jpg" class="rounded-circle wh-48" alt="admin">
+                    <img src="{{ asset('assets/backend') }}/images/kausar.jpg" class="rounded-circle wh-48" alt="admin">
                 </a>
             </div>
             <div class="flex-grow-1 ms-3 info">

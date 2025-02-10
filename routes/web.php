@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Controllers\Admin\AjaxController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LocationController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\ServiceCategoryController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\VendorController;
 use App\Http\Controllers\Auth\LoginController;
@@ -46,17 +46,6 @@ Route::group(['middleware' => ['auth:admin']], function () {
         Route::get('dashboard', [DashboardController::class, 'showDashboard'])->name('dashboard');
         Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
 
-        Route::group(['prefix' => 'vendors'], function () {
-            Route::get('/', [VendorController::class, 'index'])->name('admin.vendor.index');
-            Route::post('/filtered', [VendorController::class, 'indexFiltered'])->name('admin.vendor.filtered');
-            Route::get('/{id}/view', [VendorController::class, 'viewVendor'])->name('admin.vendor.view');
-            Route::get('/{id}/delete', [VendorController::class, 'delete'])->name('admin.vendor.delete');
-        });
-
-        Route::group(['prefix' => 'ajax'], function () {
-            Route::get('get-category-by-business-type', [AjaxController::class, 'getCategoryByBusinessType'])->name('ajax.get-category-by-business-type');
-        });
-
         Route::group(['prefix' => 'service-category'], function () {
             Route::get('/', [ServiceCategoryController::class, 'index'])->name('admin.service-category.index');
             Route::post('/filtered', [ServiceCategoryController::class, 'indexFiltered'])->name('admin.service-category.filtered');
@@ -95,6 +84,16 @@ Route::group(['middleware' => ['auth:admin']], function () {
             Route::get('/{id}/edit', [TeamController::class, 'edit'])->name('admin.team.edit');
             Route::post('/{id}/update', [TeamController::class, 'update'])->name('admin.team.update');
             Route::get('/{id}/delete', [TeamController::class, 'delete'])->name('admin.team.delete');
+        });
+
+        Route::group(['prefix' => 'slider'], function () {
+            Route::get('/', [SliderController::class, 'index'])->name('admin.slider.index');
+            Route::post('/filtered', [SliderController::class, 'indexFiltered'])->name('admin.slider.filtered');
+            Route::get('/create', [SliderController::class, 'create'])->name('admin.slider.create');
+            Route::post('/create', [SliderController::class, 'store'])->name('admin.slider.store');
+            Route::get('/{id}/edit', [SliderController::class, 'edit'])->name('admin.slider.edit');
+            Route::post('/{id}/update', [SliderController::class, 'update'])->name('admin.slider.update');
+            Route::get('/{id}/delete', [SliderController::class, 'delete'])->name('admin.slider.delete');
         });
     });
 });

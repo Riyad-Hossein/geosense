@@ -126,26 +126,6 @@
             getPaginatedListData($(button).attr('data-href'), "#ajax-data-load", filterData);
         }
 
-        function getServiceCategory(select) {
-            var business_type_id = $(select).val();
-            let url = "{{ route('ajax.get-category-by-business-type') }}";
-            if(business_type_id.length > 0){
-                ajaxGet(url, {business_type_id:business_type_id}, function (response) {
-                    if (response.status == 200) {
-                        $("#category_id").html(response.view);
-                        $("#category_id2").html(response.view);
-                    } else {
-                        $("#category_id").html('');
-                        $("#category_id2").html('');
-                        toastr.error(response.message);
-                    }
-                });
-            }else{
-                $("#category_id").html('');
-                $("#category_id2").html('');
-            }
-        }
-
         function editItem(id){
             let url = "{{route('admin.service.edit', ':id')}}";
             url = url.replace(':id', id);

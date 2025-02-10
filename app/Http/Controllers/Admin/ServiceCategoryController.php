@@ -26,9 +26,8 @@ class ServiceCategoryController extends BackendController
     {
         $this->setPageTitle("Service Category");
         $this->setActiveMenu('service-category');
-        $data['business_types'] = BusinessType::get();
 
-        return  $this->view('backend.category.index')->with($data);
+        return  $this->view('backend.category.index');
     }
 
     public function indexFiltered(Request $request)
@@ -54,12 +53,10 @@ class ServiceCategoryController extends BackendController
     {
         try {
             $request->validate([
-                'business_type' => 'required',
                 'name' => 'required|string',
             ]);
 
             $check_duplicate = ServiceCategory::where('name', $request->name)
-                ->where('business_type_id', $request->business_type)
                 ->where('deleted', ServiceCategory::DELETED_NO)
                 ->where('status', ServiceCategory::STATUS_ACTIVE)
                 ->first();
@@ -68,7 +65,6 @@ class ServiceCategoryController extends BackendController
             }
 
             $category = new ServiceCategory();
-            $category->business_type_id = $request->business_type;
             $category->name = $request->name;
             $category->slug = Str::slug($request->name);
             $category->created_by = Auth::user()->id;
@@ -86,8 +82,6 @@ class ServiceCategoryController extends BackendController
     public function edit($id)
     {
         try {
-            $data['business_types'] = BusinessType::get();
-
             $data['item'] = ServiceCategory::where('id', $id)
                 ->where('deleted', ServiceCategory::DELETED_NO)
                 ->where('status', ServiceCategory::STATUS_ACTIVE)
@@ -111,7 +105,6 @@ class ServiceCategoryController extends BackendController
     {
         try {
             $request->validate([
-                'business_type' => 'required',
                 'name' => 'required|string'
             ]);
 
@@ -124,7 +117,6 @@ class ServiceCategoryController extends BackendController
             }
 
             $check_duplicate = ServiceCategory::where('name', $request->name)
-                ->where('business_type_id', $request->business_type)
                 ->where('deleted', ServiceCategory::DELETED_NO)
                 ->where('status', ServiceCategory::STATUS_ACTIVE)
                 ->where('id', '!=', $id)
@@ -134,7 +126,6 @@ class ServiceCategoryController extends BackendController
                 throw new \Exception("Service category already exists");
             }
 
-            $category->business_type_id = $request->business_type;
             $category->name = $request->name;
             $category->slug = Str::slug($request->name);
             $category->updated_by = Auth::user()->id;

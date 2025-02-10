@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('service_categories', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('business_type_id');
             $table->string('name');
             $table->string('slug');
+            $table->text('description')->nullable();
             $table->string('image')->nullable();
             \App\Helpers\MigrationHelper::getCommonColumns($table);
         });

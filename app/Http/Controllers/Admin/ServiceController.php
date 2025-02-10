@@ -29,8 +29,10 @@ class ServiceController extends BackendController
     {
         $this->setPageTitle("Service");
         $this->setActiveMenu('service');
-        $data['business_types'] = BusinessType::get();
-
+        $data['service_categories'] = ServiceCategory::where('deleted', ServiceCategory::DELETED_NO)
+            ->where('status', ServiceCategory::STATUS_ACTIVE)
+            ->get();
+            
         return  $this->view('backend.service.index')->with($data);
     }
 
@@ -57,13 +59,11 @@ class ServiceController extends BackendController
     {
         try {
             $request->validate([
-                'business_type' => 'required',
                 'service_category' => 'required',
                 'name' => 'required|string',
             ]);
 
             $check_duplicate = Service::where('name', $request->name)
-                ->where('business_type_id', $request->business_type)
                 ->where('service_category_id', $request->service_category)
                 ->where('deleted', Service::DELETED_NO)
                 ->where('status', Service::STATUS_ACTIVE)
@@ -92,7 +92,6 @@ class ServiceController extends BackendController
             }
 
             $service = new Service();
-            $service->business_type_id = $request->business_type;
             $service->service_category_id = $request->service_category;
             $service->name = $request->name;
             $service->slug = Str::slug($request->name);
@@ -129,8 +128,6 @@ class ServiceController extends BackendController
     public function edit($id)
     {
         try {
-            $data['business_types'] = BusinessType::get();
-
             $data['item'] = Service::where('id', $id)
                 ->where('deleted', Service::DELETED_NO)
                 ->where('status', Service::STATUS_ACTIVE)
@@ -140,8 +137,7 @@ class ServiceController extends BackendController
                 throw new \Exception('Service not found');
             }
 
-            $data['service_categories'] = ServiceCategory::where('business_type_id', $data['item']->business_type_id)
-                ->where('deleted', ServiceCategory::DELETED_NO)
+            $data['service_categories'] = ServiceCategory::where('deleted', ServiceCategory::DELETED_NO)
                 ->where('status', ServiceCategory::STATUS_ACTIVE)
                 ->get();
 
@@ -159,7 +155,7 @@ class ServiceController extends BackendController
     {
         try {
             $request->validate([
-                'business_type' => 'required',
+                'service_category' => 'required',
                 'name' => 'required|string'
             ]);
 
@@ -172,7 +168,7 @@ class ServiceController extends BackendController
             }
 
             $check_duplicate = Service::where('name', $request->name)
-                ->where('business_type_id', $request->business_type)
+                ->where('service_category_id', $request->service_category)
                 ->where('deleted', Service::DELETED_NO)
                 ->where('status', Service::STATUS_ACTIVE)
                 ->where('id', '!=', $id)
@@ -200,7 +196,6 @@ class ServiceController extends BackendController
                 $imagePath = $result['path'];
             }
 
-            $service->business_type_id = $request->business_type;
             $service->service_category_id = $request->service_category;
             $service->name = $request->name;
             $service->slug = Str::slug($request->name);
@@ -236,7 +231,7 @@ class ServiceController extends BackendController
         }catch (\Exception $e) {
             return $this->returnAjaxError([],$e->getMessage());
         }
-        return $this->returnAjaxSuccess([], 'Service category updated successfully');
+        return $this->returnAjaxSuccess([], 'Service updated successfully');
     }
 
     public function delete($id)
