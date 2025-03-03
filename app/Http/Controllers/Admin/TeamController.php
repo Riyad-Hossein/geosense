@@ -55,6 +55,7 @@ class TeamController extends BackendController
             $request->validate([
                 'name' => 'required|string',
                 'designation' => 'required|string',
+                'description' => 'required|string',
             ]);
 
             $check_duplicate = TeamMember::where('name', $request->name)
@@ -93,6 +94,7 @@ class TeamController extends BackendController
             $team->linkedin_url = $request->linkedin_url;
             $team->facebook_url = $request->facebook_url;
             $team->twitter_url = $request->twitter_url;
+            $team->description = $request->description;
             $team->image = $imagePath;
             $team->created_by = Auth::user()->id;
             $team->created_at = now();
@@ -134,6 +136,7 @@ class TeamController extends BackendController
             $request->validate([
                 'name' => 'required|string',
                 'designation' => 'required|string',
+                'description' => 'required|string',
             ]);
 
             $team = TeamMember::where('id', $id)
@@ -180,6 +183,7 @@ class TeamController extends BackendController
             $team->linkedin_url = $request->linkedin_url;
             $team->facebook_url = $request->facebook_url;
             $team->twitter_url = $request->twitter_url;
+            $team->description = $request->description;
             $team->image = $imagePath;
             $team->created_by = Auth::user()->id;
             $team->created_at = now();

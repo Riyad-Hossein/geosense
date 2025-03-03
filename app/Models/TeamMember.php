@@ -35,6 +35,7 @@ class TeamMember extends Model
         'linkedin_url',
         'facebook_url',
         'twitter_url',
+        'description',
         'image',
         'status',
         'created_by',
@@ -51,6 +52,6 @@ class TeamMember extends Model
         if ($this->image != null && $this->image != '') {
             return asset($this->image);
         }
-        return asset('assets/images/user.png');
+        return asset('assets/backend/images/user.png');
     }
 }

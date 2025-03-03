@@ -14,7 +14,7 @@
                         <select name="project_category" id="category_id2" class="form-select select2 form-control h-58 ps-5" required>
                             <option value="" class="text-dark">Select Category</option>
                             @foreach ($service_categories as $category)
-                                <option value="{{ $category->id }}" {{ ($item->project_category_id == $category->id) ? 'selected' : '' }} class="text-dark">{{ $category->name }}</option>
+                                <option value="{{ $category->id }}" {{ ($item->service_category_id == $category->id) ? 'selected' : '' }} class="text-dark">{{ $category->name }}</option>
                             @endforeach
                         </select>
                         <i class="fa-light fa-location-dot position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>

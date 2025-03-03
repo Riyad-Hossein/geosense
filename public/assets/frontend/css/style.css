@@ -1171,6 +1171,9 @@ width: 100%;
 }
 /* END SKILL DESIGN */
 /*START TEAM SOCIAL*/
+.team_social{
+    margin-top: 20px;
+}
 .team_social ul {
     list-style: outside none none;
     margin: 0;

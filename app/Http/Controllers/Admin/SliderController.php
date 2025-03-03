@@ -71,7 +71,7 @@ class SliderController extends BackendController
                 if (preg_match('/^data:image\/(\w+);base64,/', $image)) {
                     $isBase64 = true;
                 }
-                $uploadPath = 'team';
+                $uploadPath = 'slider';
                 if ($isBase64) {
                     $result = ImageUploadHelper::storeBase64Image($image, $uploadPath, null, 'webp');
                 } else {
@@ -152,7 +152,7 @@ class SliderController extends BackendController
                 if (preg_match('/^data:image\/(\w+);base64,/', $image)) {
                     $isBase64 = true;
                 }
-                $uploadPath = 'project';
+                $uploadPath = 'slider';
                 if ($isBase64) {
                     $result = ImageUploadHelper::storeBase64Image($image, $uploadPath, null, 'webp');
                 } else {

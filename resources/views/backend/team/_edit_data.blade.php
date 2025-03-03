@@ -60,6 +60,13 @@
                 </div>
             </div>
 
+            <div class="col-lg-12 mb-3">
+                <div class="form-group">
+                    <label class="label">Description <span class="text-danger">*</span></label>
+                    <textarea class="form-control text-dark" placeholder="Type Description" name="description" rows="3" required>{{ $item?->description }}</textarea>
+                </div>
+            </div>
+
             <div class="col-lg-6 mb-3">
                 <div class="form-group">
                     <label class="label">Profile Image <span class="text-danger">*</span></label>

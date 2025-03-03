@@ -149,97 +149,34 @@
                 <div class="col-xs-12 text-center">
                     <ul class="portfolio-filters">
                         <li class="filter active" data-filter="all">all</li>
-                        <li class="filter" data-filter="graphic">Graphic</li>
-                        <li class="filter" data-filter="print">Print</li>
-                        <li class="filter" data-filter="webdesign">webdesign</li>
+                        @foreach($service_categories as $category)
+                            <li class="filter" data-filter="{{$category?->slug}}">{{$category?->name}}</li>
+                        @endforeach
                     </ul>						
-                </div><!-- END COL -->
+                </div>
             </div><!-- END ROW -->
             <div class="row">
                 <ul class="portfolio-items-list">
-                    <li class="col-md-4 col-sm-6 col-xs-12  portfolio-item print graphic" data-cat="2">
-                        <div class="hover-overlay"> 			
-                            <img class="img-responsive" src="assets/img/portfolio/1.jpg" alt="Portfolio Image">	
-                            <a class="prettyPhoto image_zoom" href="assets/img/portfolio/1.jpg" title="Project Image">
-                                <div class="item-overlay">										
-                                    <div class="overlay-content">
-                                        <h4 class="small-title">Project Title Here</h4>
-                                        <h5>Project Category</h5>
-                                    </div>
-                                </div>	  
-                            </a>
-                        </div>
-                    </li><!-- END PORTFOLIO IMAGE -->
-                    <li class="col-md-4 col-sm-6 col-xs-12  portfolio-item webdesign" data-cat="2">
-                        <div class="hover-overlay"> 			
-                            <img class="img-responsive" src="assets/img/portfolio/2.jpg" alt="Portfolio Image">	
-                            <a class="prettyPhoto image_zoom" href="assets/img/portfolio/2.jpg" title="Project Image">
-                                <div class="item-overlay">										
-                                    <div class="overlay-content">
-                                        <h4 class="small-title">Project Title Here</h4>
-                                        <h5>Project Category</h5>
-                                    </div>
-                                </div>	  
-                            </a>
-                        </div>
-                    </li><!-- END PORTFOLIO IMAGE -->
-                    <li class="col-md-4 col-sm-6 col-xs-12  portfolio-item print graphic" data-cat="2">
-                        <div class="hover-overlay"> 			
-                            <img class="img-responsive" src="assets/img/portfolio/3.jpg" alt="Portfolio Image">	
-                            <a class="prettyPhoto image_zoom" href="assets/img/portfolio/3.jpg" title="Project Image">
-                                <div class="item-overlay">										
-                                    <div class="overlay-content">
-                                        <h4 class="small-title">Project Title Here</h4>
-                                        <h5>Project Category</h5>
-                                    </div>
-                                </div>	  
-                            </a>
-                        </div>
-                    </li><!-- END PORTFOLIO IMAGE -->
-                    <li class="col-md-4 col-sm-6 col-xs-12  portfolio-item webdesign graphic" data-cat="2">
-                        <div class="hover-overlay"> 			
-                            <img class="img-responsive" src="assets/img/portfolio/4.jpg" alt="Portfolio Image">	
-                            <a class="prettyPhoto image_zoom" href="assets/img/portfolio/4.jpg" title="Project Image">
-                                <div class="item-overlay">										
-                                    <div class="overlay-content">
-                                        <h4 class="small-title">Project Title Here</h4>
-                                        <h5>Project Category</h5>
-                                    </div>
-                                </div>	  
-                            </a>
-                        </div>
-                    </li><!-- END PORTFOLIO IMAGE -->
-                    <li class="col-md-4 col-sm-6 col-xs-12  portfolio-item graphic" data-cat="2">
-                        <div class="hover-overlay"> 			
-                            <img class="img-responsive" src="assets/img/portfolio/5.jpg" alt="Portfolio Image">	
-                            <a class="prettyPhoto image_zoom" href="assets/img/portfolio/5.jpg" title="Project Image">
-                                <div class="item-overlay">										
-                                    <div class="overlay-content">
-                                        <h4 class="small-title">Project Title Here</h4>
-                                        <h5>Project Category</h5>
-                                    </div>
-                                </div>	  
-                            </a>
-                        </div>
-                    </li><!-- END PORTFOLIO IMAGE -->
-                    <li class="col-md-4 col-sm-6 col-xs-12  portfolio-item webdesign print" data-cat="2">
-                        <div class="hover-overlay"> 			
-                            <img class="img-responsive" src="assets/img/portfolio/6.jpg" alt="Portfolio Image">	
-                            <a class="prettyPhoto image_zoom" href="assets/img/portfolio/6.jpg" title="Project Image">
-                                <div class="item-overlay">										
-                                    <div class="overlay-content">
-                                        <h4 class="small-title">Project Title Here</h4>
-                                        <h5>Project Category</h5>
-                                    </div>
-                                </div>	  
-                            </a>
-                        </div>
-                    </li><!-- END PORTFOLIO IMAGE -->
+                    @foreach($projects as $project)
+                        <li class="col-md-4 col-sm-6 col-xs-12 portfolio-item {{$project?->project_category?->slug}}" data-cat="2">
+                            <div class="hover-overlay"> 			
+                                <img class="img-responsive" src="{{$project?->show_image}}" alt="Portfolio Image">	
+                                <a class="prettyPhoto image_zoom" href="{{$project?->show_image}}" title="Project Image">
+                                    <div class="item-overlay">										
+                                        <div class="overlay-content">
+                                            <h4 class="small-title">{{$project?->name}}</h4>
+                                            <h5>{{$project?->project_category?->name}}</h5>
+                                        </div>
+                                    </div>	  
+                                </a>
+                            </div>
+                        </li>
+                    @endforeach
                 </ul>
             </div><!-- END ROW  -->
-            <div class="portfolio_btn text-center">
+            <!-- <div class="portfolio_btn text-center">
                 <a href="#" class="btn btn-default btn-portfolio-bg">See More Work</a>
-            </div>
+            </div> -->
         </div><!-- END CONTAINER  -->
     </section>
     <!-- END PORTFOLIO -->
@@ -272,154 +209,26 @@
                 <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
                     <div class="flexslider testi-slider wow animated fadeInUp" data-wow-delay=".06s">
                         <ul class="slides">
-                            <li>
-                                <div class="testi-slider-item">
-                                    <div class="team_img">
-                                        <img src="assets/img/team/team-1.jpg" class="img-responsive" alt="">
+                            @foreach($team_members as $team)
+                                <li>
+                                    <div class="testi-slider-item">
+                                        <div class="team_img">
+                                            <img src="{{$team->show_image}}" class="img-responsive" alt="">
+                                        </div>
+                                        <h6>{{$team?->name}}</h6>                 
+                                        <p>{{$team?->description}}</p>
+                                        
+                                        <div class="team_social">
+                                            <ul>
+                                                <li><a class="f_facebook  wow bounceInDown" data-wow-delay=".1s" href="{{$team?->facebook_url}}" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a class="f_twitter wow bounceInDown" data-wow-delay=".2s" href="{{$team?->twitter_url}}" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a class="f_google wow bounceInDown" data-wow-delay=".3s" href="{{$team?->email}}" target="_blank" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+                                                <li><a class="f_linkedin wow bounceInDown" data-wow-delay=".4s" href="{{$team?->linkedin_url}}" target="_blank" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                            </ul>
+                                        </div><!--END TEAM SOCIAL-->
                                     </div>
-                                        <h6>Syed Ekram</h6>                 
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a consequat nibh. Praesent sodales enim facilisis accumsan rhoncus.</p>
-                                    <div class="skills">
-                                        <div class="progress-bar-linear">
-                                            <p class="progress-bar-text">design</p>
-                                            <div class="progress-bar">
-                                                <span data-percent="95"></span>
-                                            </div>
-                                        </div>	
-                                        <div class="progress-bar-linear">
-                                            <p class="progress-bar-text">Development </p>
-                                            <div class="progress-bar">
-                                                <span data-percent="90"></span>
-                                            </div>
-                                        </div>	
-                                        <div class="progress-bar-linear">
-                                            <p class="progress-bar-text">Marketing </p>
-                                            <div class="progress-bar">
-                                                <span data-percent="75"></span>
-                                            </div>
-                                        </div>	
-                                    </div><!-- END PROGRESS BAR-->
-                                    <div class="team_social">
-                                        <ul>
-                                            <li><a class="f_facebook  wow bounceInDown" data-wow-delay=".1s" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a class="f_twitter wow bounceInDown" data-wow-delay=".2s" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a class="f_google wow bounceInDown" data-wow-delay=".3s" href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
-                                            <li><a class="f_linkedin wow bounceInDown" data-wow-delay=".4s" href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                        </ul>
-                                    </div><!--END TEAM SOCIAL-->
-                                </div>
-                            </li><!--SINGLE SLIDE-->
-                            <li>
-                                <div class="testi-slider-item">
-                                    <div class="team_img">
-                                        <img src="assets/img/team/team-2.jpg" class="img-responsive" alt="">
-                                    </div>
-                                    <h6>Habiba Islam</h6>                      
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a consequat nibh. Praesent sodales enim facilisis accumsan rhoncus.</p>
-                                    <div class="skills">
-                                        <div class="progress-bar-linear">
-                                            <p class="progress-bar-text">design</p>
-                                            <div class="progress-bar">
-                                                <span data-percent="95"></span>
-                                            </div>
-                                        </div>	
-                                        <div class="progress-bar-linear">
-                                            <p class="progress-bar-text">Development </p>
-                                            <div class="progress-bar">
-                                                <span data-percent="90"></span>
-                                            </div>
-                                        </div>	
-                                        <div class="progress-bar-linear">
-                                            <p class="progress-bar-text">Marketing </p>
-                                            <div class="progress-bar">
-                                                <span data-percent="75"></span>
-                                            </div>
-                                        </div>	
-                                    </div><!-- END PROGRESS BAR-->
-                                    <div class="team_social">
-                                        <ul>
-                                            <li><a class="f_facebook  wow bounceInDown" data-wow-delay=".1s" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a class="f_twitter wow bounceInDown" data-wow-delay=".2s" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a class="f_google wow bounceInDown" data-wow-delay=".3s" href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
-                                            <li><a class="f_linkedin wow bounceInDown" data-wow-delay=".4s" href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                        </ul>
-                                    </div><!--END TEAM SOCIAL-->										
-                                </div>
-                            </li><!--SINGLE SLIDE-->
-                            <li>
-                                <div class="testi-slider-item">
-                                    <div class="team_img">
-                                        <img src="assets/img/team/team-3.jpg" class="img-responsive" alt="">
-                                    </div>
-                                    <h6>Masum Billah</h6>                      
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a consequat nibh. Praesent sodales 	enim facilisis accumsan rhoncus.</p>
-                                    <div class="skills">
-                                        <div class="progress-bar-linear">
-                                            <p class="progress-bar-text">design</p>
-                                            <div class="progress-bar">
-                                                <span data-percent="95"></span>
-                                            </div>
-                                        </div>	
-                                        <div class="progress-bar-linear">
-                                            <p class="progress-bar-text">Development </p>
-                                            <div class="progress-bar">
-                                                <span data-percent="90"></span>
-                                            </div>
-                                        </div>	
-                                        <div class="progress-bar-linear">
-                                            <p class="progress-bar-text">Marketing </p>
-                                            <div class="progress-bar">
-                                                <span data-percent="75"></span>
-                                            </div>
-                                        </div>	
-                                    </div><!-- END PROGRESS BAR-->
-                                    <div class="team_social">
-                                        <ul>
-                                            <li><a class="f_facebook  wow bounceInDown" data-wow-delay=".1s" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a class="f_twitter wow bounceInDown" data-wow-delay=".2s" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a class="f_google wow bounceInDown" data-wow-delay=".3s" href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
-                                            <li><a class="f_linkedin wow bounceInDown" data-wow-delay=".4s" href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                        </ul>
-                                    </div><!--END TEAM SOCIAL-->										
-                                </div>
-                            </li><!--SINGLE SLIDE-->
-                            <li>
-                                <div class="testi-slider-item">
-                                    <div class="team_img">
-                                        <img src="assets/img/team/team-4.jpg" class="img-responsive" alt="">
-                                    </div>
-                                    <h6>Nurhajan Akter</h6>                      
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a consequat nibh. Praesent sodales enim facilisis accumsan rhoncus.</p>
-                                    <div class="skills">
-                                        <div class="progress-bar-linear">
-                                            <p class="progress-bar-text">design</p>
-                                            <div class="progress-bar">
-                                                <span data-percent="95"></span>
-                                            </div>
-                                        </div>	
-                                        <div class="progress-bar-linear">
-                                            <p class="progress-bar-text">Development </p>
-                                            <div class="progress-bar">
-                                                <span data-percent="90"></span>
-                                            </div>
-                                        </div>	
-                                        <div class="progress-bar-linear">
-                                            <p class="progress-bar-text">Marketing </p>
-                                            <div class="progress-bar">
-                                                <span data-percent="75"></span>
-                                            </div>
-                                        </div>	
-                                    </div><!-- END PROGRESS BAR-->
-                                    <div class="team_social">
-                                        <ul>
-                                            <li><a class="f_facebook  wow bounceInDown" data-wow-delay=".1s" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a class="f_twitter wow bounceInDown" data-wow-delay=".2s" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a class="f_google wow bounceInDown" data-wow-delay=".3s" href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
-                                            <li><a class="f_linkedin wow bounceInDown" data-wow-delay=".4s" href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                        </ul>
-                                    </div><!--END TEAM SOCIAL-->
-                                </div>
-                            </li><!--SINGLE SLIDE-->
+                                </li>
+                            @endforeach
                         </ul><!--- END SLIDES -->
                     </div><!--- END FLEXSLIDER -->
                 </div><!--- END COL -->

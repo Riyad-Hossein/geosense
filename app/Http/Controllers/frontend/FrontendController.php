@@ -28,6 +28,18 @@ class FrontendController extends Controller
         $data['services'] = Service::where('status', Service::STATUS_ACTIVE)
             ->where('deleted', Service::DELETED_NO)
             ->get();
+        
+        $data['service_categories'] = ServiceCategory::where('status', ServiceCategory::STATUS_ACTIVE)
+            ->where('deleted', ServiceCategory::DELETED_NO)
+            ->get();
+
+        $data['projects'] = Project::where('status', Project::STATUS_ACTIVE)
+            ->where('deleted', Project::DELETED_NO)
+            ->get();
+
+        $data['team_members'] = TeamMember::where('status', TeamMember::STATUS_ACTIVE)
+            ->where('deleted', TeamMember::DELETED_NO)
+            ->get();
 
         return view('frontend.pages.index')->with($data);
     }
