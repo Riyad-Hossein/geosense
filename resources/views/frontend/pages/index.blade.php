@@ -28,27 +28,27 @@
                 <div class="section-title text-center wow zoomIn">
                     <h2>We are GeoSense Global</h2>						
                     <span></span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru<br> exercit ation Lorem ipsum dolor sit amet.Veniam quis notru exercit.</p>
+                    <p>Providing innovative GIS, remote sensing, and ICT solutions to empower organizations and researchers with smarter decisions.</p>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="about_single wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-                        <h4><span>01</span> Business Consulting</h4>
+                        <h4><span>01</span> GIS & Remote Sensing Solutions</h4>
                         <span></span>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor enim minim.</p>
+                        <p>We specialize in GIS mapping, satellite image analysis, and geospatial data processing to deliver practical and effective solutions.</p>
                     </div>
                 </div><!--- END COL -->
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="about_single wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-                        <h4><span>02</span> IT Consulting</h4>
+                        <h4><span>02</span> Research and Consultancy</h4>
                         <span></span>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor enim minim.</p>
+                        <p>Our team supports research projects and offers expert consultancy to solve real-world challenges in diverse fields.</p>
                     </div>
                 </div><!--- END COL -->
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="about_single wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-                        <h4><span>03</span> Online Consulting</h4>
+                        <h4><span>03</span> Integrated Smart Solutions</h4>
                         <span></span>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor enim minim.</p>
+                        <p>We create smart systems, digital twins, and user-friendly web and mobile applications for seamless data-driven decisions.</p>
                     </div>
                 </div><!--- END COL -->
             </div><!--- END ROW -->
@@ -67,6 +67,7 @@
                             <li data-target="#why_choose" data-slide-to="0" class="active"></li>
                             <li data-target="#why_choose" data-slide-to="1"></li>
                             <li data-target="#why_choose" data-slide-to="2"></li>
+                            <li data-target="#why_choose" data-slide-to="3"></li>
                         </ol>
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner text-center">								
@@ -75,7 +76,7 @@
                                     <i class="fa fa-diamond"></i>
                                     <h3>Our Mission</h3>
                                     <span></span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum ante vel aliquet euismod. Curabitur accumsan vitae augue vitae eleifend. Nam nisl massa, malesuada id imperdiet ac.</p>	
+                                    <p>To provide innovative GIS, remote sensing, and ICT solutions that empower organizations and researchers to solve challenges and make smarter decisions.</p>	
                                 </div>
                             </div><!-- END ITEM ACTIVE -->							
                             <div class="item">
@@ -83,7 +84,7 @@
                                     <i class="fa fa-lightbulb-o"></i>
                                     <h3>Our vision</h3>
                                     <span></span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum ante vel aliquet euismod. Curabitur accumsan vitae augue vitae eleifend. Nam nisl massa, malesuada id imperdiet ac.</p>	
+                                    <p>To be a global leader in geospatial intelligence and digital innovation, advancing sustainable development through precise, data-driven insights and transformative technology.</p>	
                                 </div>
                             </div><!-- END ITEM 2 -->						
                             <div class="item">
@@ -91,7 +92,7 @@
                                     <i class="fa fa-paper-plane-o"></i>
                                     <h3>Our history</h3>
                                     <span></span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum ante vel aliquet euismod. Curabitur accumsan vitae augue vitae eleifend. Nam nisl massa, malesuada id imperdiet ac.</p>
+                                    <p>Since its inception, Geosense Global has been dedicated to bridging the gap between cutting-edge geospatial technology and real-world challenges. With a strong foundation in research and innovation, we have continually evolved to meet the growing needs of diverse industries and communities.</p>
                                 </div>
                             </div><!-- END ITEM 3 -->						
                             <div class="item">
@@ -99,7 +100,7 @@
                                     <i class="fa fa-heart-o"></i>
                                     <h3>Our Business</h3>
                                     <span></span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum ante vel aliquet euismod. Curabitur accumsan vitae augue vitae eleifend. Nam nisl massa, malesuada id imperdiet ac.</p>
+                                    <p>Geosense Global specializes in delivering comprehensive solutions in GIS, remote sensing, and ICT. Our services empower clients to manage resources effectively, plan intelligently, and act decisively using spatial data and customized digital tools tailored to their needs.</p>
                                 </div>
                             </div><!-- END ITEM 4 -->
                         </div><!-- END CAROUSEL INNER -->
@@ -117,8 +118,9 @@
                 <div class="section-title wow zoomIn">
                     <h2>Our Services</h2>
                     <span></span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru<br> exercit ation Lorem ipsum dolor sit amet.Veniam quis notru exercit.</p>
+                    <p>We offer a wide range of professional services tailored to meet your business needs. From strategic planning to full-scale execution, our team is dedicated to delivering exceptional results with every project.</p>
                 </div>
+
                 @foreach ($services as $service)    
                     <div class="col-md-4 col-sm-4 col-xs-12 no-padding wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
                         <a href="#">   
@@ -142,10 +144,11 @@
             <!-- PORTFOLIO FILTER BUTTONS -->	
             <div class="row">	
                 <div class="section-title text-center wow zoomIn">
-                    <h2>Projects we have completed</h2>
+                    <h2>Projects We Have Completed</h2>
                     <span></span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru<br> exercit ation Lorem ipsum dolor sit amet.Veniam quis notru exercit.</p>
-                </div>				
+                    <p>Explore some of the successful projects we've delivered across various industries. Each project showcases our commitment to quality, innovation, and customer satisfaction.</p>
+                </div>
+				
                 <div class="col-xs-12 text-center">
                     <ul class="portfolio-filters">
                         <li class="filter active" data-filter="all">all</li>
@@ -187,8 +190,8 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 col-xs-12 text-center">
                     <div class="promotion_content">
-                        <h1>Your choice is our big choice</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed elit tortor. Quisque bibendum mauris velit, sed tincidunt massa lacinia nec. Mauris rutrum viverra metus, vel aliquet libero eleifend eu.</p>
+                        <h1>Your Data, Our Expertise – Transforming Challenges into Solutions.</h1>
+                        <p>Providing innovative GIS, remote sensing, and ICT solutions to solve complex challenges and support sustainable development.</p>
                         <a href="#contact">get start</a>
                     </div>
                 </div><!-- END COL  -->
@@ -204,8 +207,9 @@
                 <div class="section-title text-center wow zoomIn">
                     <h2>Our Experts</h2>
                     <span></span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru<br> exercit ation Lorem ipsum dolor sit amet.Veniam quis notru exercit.</p>
-                </div>				
+                    <p>Meet our team of experienced professionals who are dedicated to delivering exceptional results. With deep industry knowledge and a passion for excellence, our experts are here to guide you every step of the way.</p>
+                </div>
+				
                 <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
                     <div class="flexslider testi-slider wow animated fadeInUp" data-wow-delay=".06s">
                         <ul class="slides">
@@ -244,7 +248,7 @@
                 <div class="section-title text-center wow zoomIn">
                     <h2>Latest Blog</h2>
                     <span></span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru<br> exercit ation Lorem ipsum dolor sit amet.Veniam quis notru exercit.</p>
+                    <p>Explore our latest articles, insights, and updates on topics that matter. Stay informed, inspired, and engaged with fresh content curated just for you.</p>
                 </div>
                 <div class="col-md-4 col-sm-12 col-xs-12">
                     <article class="blog-post">						
@@ -306,12 +310,12 @@
                 <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp">
                     <div class="contact_address">
                         <h3>Contact Us</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum ante vel aliquet euismod. Curabitur accumsan vitae augue vitae.</p>						
+                        <p>If you have any inquiries or require assistance, please do not hesitate to contact our support team.</p>						
                         <ul>
-                            <li><i class="fa fa-rocket"></i>2369 Robinson Lane Jackson,OH 45640</li>
-                            <li><i class="fa fa-phone"></i>(+1) 740-395-3829</li>
-                            <li><i class="fa fa-envelope"></i>Info@accede.com</li>
-                            <li><i class="fa fa-clock-o"></i>Mon - Fri: 08.00 - 16.00</li>
+                            <li><i class="fa fa-rocket"></i>Markt 70, 2611 GW Delft, Netherlands</li>
+                            <li><i class="fa fa-phone"></i>+351920611769</li>
+                            <li ><i class="fa fa-envelope"></i>geosenseglobal@gmail.com</li>
+                            <li><i class="fa fa-clock-o"></i>•	Mon - Fri: 08.00 - 16.00</li>
                         </ul>
                     </div>
                 </div><!-- END COL -->						

@@ -43,9 +43,9 @@
 					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 wow zoomIn">
 						<div class="footer_social pull-right">
 							<ul>
-								<li><a class="footer_facebook  wow bounceInDown" data-wow-delay=".1s" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="footer_facebook  wow bounceInDown" data-wow-delay=".1s" href="https://www.facebook.com/geosenseglobal15027" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
 								<li><a class="footer_google wow bounceInDown" data-wow-delay=".3s" href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
-								<li><a class="footer_linkedin wow bounceInDown" data-wow-delay=".4s" href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+								<li><a class="footer_linkedin wow bounceInDown" data-wow-delay=".4s" href="https://www.linkedin.com/company/geosenseglobal" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
 								<li><a class="footer_youtube wow bounceInDown" data-wow-delay=".5s" href="#" data-toggle="tooltip" data-placement="top" title="Youtube"><i class="fa fa-youtube"></i></a></li>
 								<li><a class="footer_skype wow bounceInDown" data-wow-delay=".6s" href="#" data-toggle="tooltip" data-placement="top" title="Skype"><i class="fa fa-skype"></i></a></li>
 							</ul>
