@@ -319,7 +319,7 @@
                         <p>If you have any inquiries or require assistance, please do not hesitate to contact our support team.</p>						
                         <ul>
                             <li><i class="fa fa-rocket"></i>Markt 70, 2611 GW Delft, Netherlands</li>
-                            <li><i class="fa fa-phone"></i><a href="tel:+31616959831" style="color:#fff">+31616959831</a>, <a href="https://api.whatsapp.com/send?phone=15551234567" style="color:#fff">+351920611769</a> (Whatsapp)</li>
+                            <li><i class="fa fa-phone"></i><a href="tel:+31616959831" style="color:#fff">+31616959831</a>, <a href="https://api.whatsapp.com/send?phone=+351920611769" style="color:#fff">+351920611769</a> (Whatsapp)</li>
                             <li ><i class="fa fa-envelope"></i><a href="mailto:geosenseglobal@gmail.com" style="color: #fff">geosenseglobal@gmail.com</a></li>
                             <li><i class="fa fa-clock-o"></i>•	Mon - Fri: 08.00 - 16.00</li>
                         </ul>
