@@ -23,7 +23,7 @@
 <!-- WOW - Reveal Animations When You Scroll -->
   <script src="{{ asset('assets/frontend') }}/js/wow.min.js"></script>
 <!-- map js -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuU_0_uLMnFM-2oWod_fzC0atPZj7dHlU"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuU_0_uLMnFM-2oWod_fzC0atPZj7dHlU"></script> -->
 <!-- scripts js -->
   <script src="{{ asset('assets/frontend') }}/js/scripts.js"></script>
   

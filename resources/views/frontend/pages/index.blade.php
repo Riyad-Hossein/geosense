@@ -32,21 +32,27 @@
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="about_single wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-                        <h4><span>01</span> GIS & Remote Sensing Solutions</h4>
+                        <h4>
+                            <!-- <span>01</span>  -->
+                        GIS & Remote Sensing Solutions</h4>
                         <span></span>
                         <p>We specialize in GIS mapping, satellite image analysis, and geospatial data processing to deliver practical and effective solutions.</p>
                     </div>
                 </div><!--- END COL -->
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="about_single wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-                        <h4><span>02</span> Research and Consultancy</h4>
+                        <h4>
+                            <!-- <span>02</span> -->
+                             Research and Consultancy</h4>
                         <span></span>
                         <p>Our team supports research projects and offers expert consultancy to solve real-world challenges in diverse fields.</p>
                     </div>
                 </div><!--- END COL -->
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="about_single wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-                        <h4><span>03</span> Integrated Smart Solutions</h4>
+                        <h4>
+                            <!-- <span>03</span> -->
+                             Integrated Smart Solutions</h4>
                         <span></span>
                         <p>We create smart systems, digital twins, and user-friendly web and mobile applications for seamless data-driven decisions.</p>
                     </div>
@@ -57,7 +63,7 @@
     <!-- END ABOUT US -->		
 
     <!-- START OUR MISSION & VISION -->
-    <section class="why_choose_us section-padding" style="background-image: url('{{ asset('assets/frontend/img/bg/bg1.jpg') }}');  background-size:cover; background-position: center center;background-attachment:fixed;">
+    <section class="why_choose_us section-padding" style="background-image: url(assets/frontend/img/bg/bg1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
@@ -185,7 +191,7 @@
     <!-- END PORTFOLIO -->
 
     <!-- START PROMOTION -->
-    <section class="promotions" style="background-image: url(assets/img/bg/promotions-bg.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;">
+    <section class="promotions" style="background-image: url(assets/frontend/img/bg/promotion.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 col-xs-12 text-center">
@@ -304,7 +310,7 @@
     <!-- END BLOG -->
 
     <!-- START CONTACT FORM-->
-    <section id="contact" class="contact_area" style="background-image: url(assets/img/bg/contact-bg.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;">
+    <section id="contact" class="contact_area" style="background-image: url(assets/frontend/img/bg/bg2.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;">
         <div class="container">
             <div class="row">		
                 <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp">
@@ -313,8 +319,8 @@
                         <p>If you have any inquiries or require assistance, please do not hesitate to contact our support team.</p>						
                         <ul>
                             <li><i class="fa fa-rocket"></i>Markt 70, 2611 GW Delft, Netherlands</li>
-                            <li><i class="fa fa-phone"></i>+351920611769</li>
-                            <li ><i class="fa fa-envelope"></i>geosenseglobal@gmail.com</li>
+                            <li><i class="fa fa-phone"></i><a href="tel:+31616959831" style="color:#fff">+31616959831</a>, <a href="https://api.whatsapp.com/send?phone=15551234567" style="color:#fff">+351920611769</a> (Whatsapp)</li>
+                            <li ><i class="fa fa-envelope"></i><a href="mailto:geosenseglobal@gmail.com" style="color: #fff">geosenseglobal@gmail.com</a></li>
                             <li><i class="fa fa-clock-o"></i>•	Mon - Fri: 08.00 - 16.00</li>
                         </ul>
                     </div>
@@ -347,7 +353,18 @@
     <!-- END CONTACT FORM -->
 
     <!-- START MAP -->
-    <div id="map"></div>
+    <!-- <div id="map"></div> -->
+     <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2455.7022750673705!2d4.357357475374701!3d52.01230287369529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b5c25995a933%3A0x7a8e62785d49c7ce!2sMarkt%2070%2C%202611%20GW%20Delft%2C%20Netherlands!5e0!3m2!1sen!2sbd!4v1748452168024!5m2!1sen!2sbd"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+    </div>
     <!-- END MAP -->
 
 @endsection
